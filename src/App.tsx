@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import LoadingButton from '@mui/lab/LoadingButton';
 import Typography from '@mui/material/Typography';
-import { CardActionArea, CardMedia, Container, Grid, TextField} from "@mui/material";
+import { CardActionArea, CardMedia, Container, Grid, TextField, Alert, AlertTitle} from "@mui/material";
 import FormControl from '@mui/material/FormControl';
 
 interface Drink{
@@ -69,7 +69,7 @@ function App() {
             </div>
             <Container className='container' fixed={true}>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 1, sm: 8, md: 12 }}>
-                    {data.drinks.map((drink: any) => (
+                    {data.drinks && data.drinks.map((drink: any) => (
                         <Grid item={true} xs={2} sm={4} md={4} key={drink.idDrink} >
                             <Card sx={{ minWidth: 275 }} key={drink.idDrink}
                                   style={{
@@ -145,6 +145,15 @@ function App() {
                         </Grid>
                         )
                     )}
+                    {
+                        data.drinks === null &&
+                        <div className="center">
+                            <Alert severity="warning">
+                                <AlertTitle>Warning</AlertTitle>
+                                The cocktail was not found — <strong>try looking for another cocktail.</strong>
+                            </Alert>
+                        </div>
+                    }
                 </Grid>
             </Container>
         </div>

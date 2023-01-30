@@ -29,3 +29,7 @@ html, body{
     display: block;
     transitionDuration: '0.3s';
 }
+
+.center{
+    margin: 0 auto;
+}

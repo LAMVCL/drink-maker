@@ -1,6 +1,31 @@
 html, body{
   background-color: #083565;
-  width: 75%;
+}
+
+.main-form{
+  width: 35%;
   margin: 0 auto;
   margin-top: 30px;
+}
+
+.container{
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.search-button{
+    margin-top: 20px;
+}
+
+.full-height{
+    height: 100%;
+}
+
+.start-height{
+    height: 350px;
+}
+
+.card-style{
+    display: block;
+    transitionDuration: '0.3s';
 }

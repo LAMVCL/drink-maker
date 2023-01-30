@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -38,6 +38,10 @@ function App() {
         }))
         fullSize ? setFullSize(false) : setFullSize(true);
     }
+
+    useEffect(() => {
+        document.title = 'D R I N K   -   M A K E R';
+    }, []);
 
     return (
         <div className="App">

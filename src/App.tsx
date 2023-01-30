@@ -42,30 +42,33 @@ function App() {
     return (
         <div className="App">
             <div className="main-form">
-                <form onSubmit={handleSubmit}>
-                    <Card sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
-                                Welcome Tipsy Bartender !
-                            </Typography>
-                            <hr/>
-                            <Typography sx={{ fontSize: 16 }} mb={1} component="div">
-                                Please search your favorites cocktails here.
-                            </Typography>
-                            <FormControl fullWidth={true}>
-                                <TextField  id="outlined-basic"
-                                           size={"small"} label="Cocktail" name="cocktail" variant="outlined"
-                                />
-                            </FormControl>
-                            <div className="search-button" >
-                                <LoadingButton variant={"contained"} loading={isLoading} type="submit" >
-                                    Search!
-                                </LoadingButton>
-                            </div>
+                <Container className="">
+                    <form onSubmit={handleSubmit} className='center container' style={{marginTop: 20}}>
+                        <Card sx={{ minWidth: 275 }} >
+                            <CardContent>
+                                <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
+                                    Welcome Tipsy Bartender !
+                                </Typography>
+                                <hr/>
+                                <Typography sx={{ fontSize: 16 }} mb={1} component="div">
+                                    Please search your favorites cocktails here.
+                                </Typography>
+                                <FormControl fullWidth={true}>
+                                    <TextField  id="outlined-basic"
+                                                size={"small"} label="Cocktail" name="cocktail" variant="outlined"
+                                    />
+                                </FormControl>
+                                <div className="search-button" >
+                                    <LoadingButton variant={"contained"} loading={isLoading} type="submit" >
+                                        Search!
+                                    </LoadingButton>
+                                </div>
 
-                        </CardContent>
-                    </Card>
-                </form>
+                            </CardContent>
+                        </Card>
+                    </form>
+                </Container>
+
             </div>
             <Container className='container' fixed={true}>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 1, sm: 8, md: 12 }}>
